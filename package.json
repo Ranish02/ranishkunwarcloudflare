@@ -2,7 +2,7 @@
   "name": "react_ps_proj",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://Ranish02.github.io/my-proj",
+  "homepage": "https://Ranish02.github.io/r-proj",
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
