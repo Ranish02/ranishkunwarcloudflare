@@ -18,13 +18,13 @@ const Info = () => {
         }
     }
     return (
-        <div className='flex justify-center  items-center snap-start'>
-            <div className='w-screen h-screen  bg-[#A555EC] text-white pt-[50px] pl-4'>
+        <div className='flex w-full justify-center info items-center snap-start'>
+            <div className='w-full h-screen  bg-[#A555EC] text-white pt-[50px] pl-4'>
                 <div className='w-screen h-screen text-white pt-[50px] px-4'>
                     <div className='grid grid-cols-1 md:grid-cols-2'>
                         <div className='flex justify-center text-center px-10 items-center' >
                             <div>
-                                <div className=' text-4xl md:text-8xl headings font-semibold p-4'>
+                                <div className='text-4xl md:text-5xl xl:text-7xl headings font-semibold p-4'>
                                     FRAMEWORKS
                                 </div>
                                 <div className='p-4 text-sm md:text-base'>

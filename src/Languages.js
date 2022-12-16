@@ -21,13 +21,13 @@ const Languages = () => {
         }
     }
     return (
-        <div className='flex justify-center  items-center snap-start'>
-            <div className='w-screen h-screen  bg-[#1363DF] text-white pt-[50px] pl-4'>
+        <div className='flex justify-center languages items-center snap-start'>
+            <div className='w-full h-screen  bg-[#1363DF] text-white pt-[50px] pl-4'>
                 <div className='w-screen h-screen text-white pt-[50px] px-4'>
                     <div className='grid grid-cols-1 md:grid-cols-2'>
                         <div className='flex justify-center text-center px-10 items-center' >
                             <div>
-                                <div className=' text-4xl md:text-8xl headings font-semibold p-4'>
+                                <div className='text-4xl md:text-7xl xl:text-8xl headings font-semibold p-4'>
                                     LANGUAGES
                                 </div>
                                 <div className='p-4 text-sm md:text-base'>
@@ -39,7 +39,7 @@ const Languages = () => {
                         </div>
                         <div className='flex justify-center items-center'>
                             <div>
-                                <img src="https://cdn.discordapp.com/attachments/979623779477123122/1052897107117350913/IMG20220414160748.jpg" alt="" className='rounded-full overflow-hidden cropped' />
+                                <img src="https://cdn.discordapp.com/attachments/979623779477123122/1052896368907276328/Screenshot_20220731-021934_Gallery.jpg" alt="" className='rounded-full overflow-hidden cropped' />
                             </div>
 
                         </div>

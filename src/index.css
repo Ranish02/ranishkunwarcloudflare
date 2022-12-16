@@ -84,3 +84,24 @@ body {
 .headings {
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
+
+.mysnap {
+  scroll-snap-type: x proximity;
+}
+
+section {
+  height: 100vh;
+  scroll-snap-align: start;
+}
+
+.snapcontainer {
+  overflow-y: scroll;
+  height: 100vh;
+  scroll-snap-type: mandatory;
+}
+
+.instacropped {
+  height: 927px;
+  object-fit: cover;
+  object-position: 105% 50%;
+}

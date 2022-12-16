@@ -28,9 +28,6 @@ const Nav = () => {
                         <li className='px-2 md:px-4 font-semibold'><NavLink to="/interest">INTEREST</NavLink></li>
                         <li className='px-2 md:px-4 font-semibold'><NavLink to="/skills">SKILLS</NavLink></li>
                         <li className='px-2 md:px-4 font-semibold'><NavLink to="/about">ABOUT</NavLink></li>
-                        <li className='px-2 md:px-4 font-semibold'><Link to="info" spy={true} smooth={true} offset={50} duration={500}>
-                            Info
-                        </Link></li>
 
                     </ul>
                 </div>
