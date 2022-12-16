@@ -10,8 +10,8 @@ const Imagesslider = () => {
                 // modules={[Navigation, Thumbs]}
                 grabCursor={true}
                 navigation={true}
-                pagination={{ clickable: true }}
-                scrollbar={{ draggable: true }}
+                // pagination={{ clickable: true }}
+                // scrollbar={{ draggable: true }}
                 breakpoints={{
                     320: {
                         slidesPerView: 1,
