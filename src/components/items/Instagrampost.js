@@ -5,7 +5,7 @@ import { TbSend } from 'react-icons/tb';
 import { FaRegComment } from 'react-icons/fa';
 import { BsTag } from 'react-icons/bs';
 import { BsThreeDots } from 'react-icons/bs';
-import Imagesslider from '../../Slider/Imagesslider';
+import Imagesslider from '../Slider/Imagesslider';
 import '../../mycss/likeanimation.css'
 
 const Instagrampost = () => {

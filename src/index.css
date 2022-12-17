@@ -65,8 +65,9 @@ body {
 
 @media (max-width: 768px) {
   .cropped {
-    width: 200px;
-    height: 200px;
+    /* width: 200px;
+    height: 200px; */
+    scale: 80%;
     object-fit: cover;
     object-position: 105% 50%;
   }

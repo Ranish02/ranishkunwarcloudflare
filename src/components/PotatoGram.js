@@ -8,7 +8,7 @@ import { AiOutlineHeart } from 'react-icons/ai';
 import { BsPersonCircle } from 'react-icons/bs';
 import { IoCompassOutline } from 'react-icons/io5';
 
-import Instagrampost from './components/items/Instagrampost';
+import Instagrampost from './items/Instagrampost';
 
 // import { AiOutlineDown } from 'react-icons/bi';
 // import { AiOutlineDown } from 'react-icons/bi';
