@@ -18,65 +18,58 @@ const Info = () => {
         }
     }
     return (
-        <div className='flex w-full justify-center info items-center snap-start'>
-            <div className='w-full h-screen  bg-[#A555EC] text-white sm:pt-[50px] sm:pl-4'>
-                <div className='w-screen h-screen text-white pt-[50px] px-4'>
+        <div className='flex justify-center languages items-center snap-start'>
+            <div className='w-full h-screen  bg-[#A555EC] text-white pt-[50px] md:pl-0'>
+                <div className='w-screen h-screen text-white md:pt-[50px] px-4'>
                     <div className='grid grid-cols-1 md:grid-cols-2'>
-                        <div className='flex justify-center text-center px-10 items-center' >
+                        <div className='flex justify-center text-center px-2 items-center' >
                             <div>
-                                <div className='text-4xl md:text-5xl xl:text-7xl headings font-semibold p-4'>
+                                <div className='text-4xl md:text-6xl xl:text-8xl headings font-semibold'>
                                     FRAMEWORKS
                                 </div>
                                 <div className='p-4 text-sm md:text-base'>
-                                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Possimus quisquam, cumque sapiente enim iure nisi rerum. Id libero mollitia dolorem eos laborum. Numquam, veniam itaque ipsam eligendi eos dolores dolore.
+                                    Here are a few notable framework that I been using to create apps.
                                     <br />
                                 </div>
                             </div>
 
                         </div>
-                        <div className='h-[100px] md:h-full flex justify-center items-center'>
+                        <div className='flex justify-center items-center'>
                             <div>
-                                <img src="https://cdn.discordapp.com/attachments/979623779477123122/1052897107117350913/IMG20220414160748.jpg" alt="" className='rounded-full overflow-hidden cropped' />
+                                <img src="https://cdn.discordapp.com/attachments/979623779477123122/1053339351079211019/IMG-20220411-WA0032.jpg" alt="" className='rounded-full overflow-hidden cropped' />
                             </div>
 
                         </div>
 
                     </div>
-                    <div className='flex justify-center'>
-                        <div>
-                            <div className='scale-75 mt-[-70px] md:scale-100'>
-                                <div>
-                                    <div className=' flex justify-end md:mt-4 md:pr-8 mb-[-2px] '>
-                                        <div className='border-[#F3CCFF] border-2 pt-1'>
-                                            {/* <button className='px-2 py-2 mx-1 bg-[#e5c5ff]'><HiViewList size={20} /></button> */}
-                                            <button className={view == 'slider' ? 'px-2 py-2 mx-1 bg-[#e5c5ff]' : 'px-2 pt-2 pb-1 mx-1 bg-[#D09CFA]'} onClick={handleToggle}>
-                                                <MdViewWeek size={20} />
-                                            </button>
-                                            <button className={view == 'slider' ? 'px-2 pt-2 pb-1 mx-1 bg-[#D09CFA]' : 'px-2 py-2 mx-1 bg-[#e5c5ff]'} onClick={handleToggle}>
-                                                <HiViewList size={20} />
-                                            </button>
+                    <div className='md:pr-8'>
+                        <div className='scale-75 md:scale-100 mt-[-40px] sm:mt-4 border-[#A0E4CB] border-2'>
+                            <div>
+                                <div className=' pt-1 flex justify-end '>
+                                    {/* <button className='px-2 py-2 mx-1 bg-[#e5c5ff]'><HiViewList size={20} /></button> */}
+                                    <button className={view === 'slider' ? 'px-2 py-2 mx-1 bg-[#e5c5ff]' : 'px-2 pt-2 pb-1 mx-1 bg-[#D09CFA]'} onClick={handleToggle}>
+                                        <MdViewWeek size={20} />
+                                    </button>
+                                    <button className={view === 'slider' ? 'px-2 pt-2 pb-1 mx-1 bg-[#D09CFA]' : 'px-2 py-2 mx-1 bg-[#e5c5ff]'} onClick={handleToggle}>
+                                        <HiViewList size={20} />
+                                    </button>
 
 
-                                            {/* <button className='px-2 py-2 mx-1 bg-[#D09CFA]' onClick={handleToggle}><MdViewWeek size={20} /></button> */}
-                                        </div>
-
-
-                                    </div>
-                                    <div className='w-[400px] md:w-full md:p-4 text-black border-[#F3CCFF] border-2 md:mr-8 rounded-l-md rounded-b-md '>
-                                        {view == 'slider' ? <>
-                                            <SkillsSlider />
-                                        </> :
-                                            <>
-                                                <SkillsGrid />
-                                            </>}
-
-                                    </div>
+                                    {/* <button className='px-2 py-2 mx-1 bg-[#D09CFA]' onClick={handleToggle}><MdViewWeek size={20} /></button> */}
+                                </div>
+                                <div className=' p-2 md:p-4 text-black border-[#87b7ff] border-t-2  rounded-l-md rounded-b-md'>
+                                    {view === 'slider' ? <>
+                                        <SkillsSlider />
+                                    </> :
+                                        <>
+                                            <SkillsGrid />
+                                        </>}
                                 </div>
                             </div>
+
                         </div>
-
                     </div>
-
+                    {/* section */}
                 </div>
             </div>
         </div>

@@ -7,7 +7,15 @@ const Board = () => {
                 <div className='grid md:grid-cols-2 grid-cols-1 h-screen '>
                     <div className='flex justify-center items-center px-10' >
                         <div>
-                            Hi I am Ranish Kunwar.
+                            <div>
+                                Hi I am
+                                <div className='font-bold text-xl'>
+                                    Ranish Kunwar
+                                </div>
+                            </div>
+                            <div>
+                                As known as:
+                            </div>
                             <div className='text-2xl'>
                                 <Typed
                                     strings={['IproFortnut', 'Nwyfo', 'Nephoos Star']}
@@ -17,7 +25,10 @@ const Board = () => {
                             </div>
 
                             <div>
-                                I love so many things. Some of the things, you'll below
+                                I love so many things. Some of the things, you'll see below.
+                            </div>
+                            <div>
+                                So let's get started
                             </div>
                         </div>
 

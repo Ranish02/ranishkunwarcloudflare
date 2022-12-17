@@ -22,8 +22,8 @@ const Languages = () => {
     }
     return (
         <div className='flex justify-center languages items-center snap-start'>
-            <div className='w-full h-screen  bg-[#1363DF] text-white pt-[50px] pl-4'>
-                <div className='w-screen h-screen text-white pt-[50px] px-4'>
+            <div className='w-full h-screen  bg-[#1363DF] text-white pt-[50px] md:pl-4'>
+                <div className='w-screen h-screen text-white md:pt-[50px] px-4'>
                     <div className='grid grid-cols-1 md:grid-cols-2'>
                         <div className='flex justify-center text-center px-10 items-center' >
                             <div>
@@ -31,7 +31,8 @@ const Languages = () => {
                                     LANGUAGES
                                 </div>
                                 <div className='p-4 text-sm md:text-base'>
-                                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Possimus quisquam, cumque sapiente enim iure nisi rerum. Id libero mollitia dolorem eos laborum. Numquam, veniam itaque ipsam eligendi eos dolores dolore.
+                                    Here are few languages I use.
+                                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ab id itaque ali
                                     <br />
                                 </div>
                             </div>
@@ -45,31 +46,34 @@ const Languages = () => {
                         </div>
 
                     </div>
-                    <div className='w-full flex justify-end mt-4 pr-8 mb-[-2px] '>
-                        <div className='border-[#A0E4CB] border-2 pt-1'>
-                            {/* <button className='px-2 py-2 mx-1 bg-[#e5c5ff]'><HiViewList size={20} /></button> */}
-                            <button className={view === 'slider' ? 'px-2 py-2 mx-1 bg-[#87b7ff]' : 'px-2 pt-2 pb-1 mx-1 bg-[#0a9dff]'} onClick={handleToggle}>
-                                <MdViewWeek size={20} />
-                            </button>
-                            <button className={view === 'slider' ? 'px-2 pt-2 pb-1 mx-1 bg-[#0a9dff]' : 'px-2 py-2 mx-1 bg-[#87b7ff]'} onClick={handleToggle}>
-                                <HiViewList size={20} />
-                            </button>
+                    <div className='md:pr-8'>
+                        <div className='scale-75 md:scale-100 mt-[-40px] sm:mt-4 border-[#A0E4CB] border-2'>
+                            <div>
+                                <div className=' pt-1 flex justify-end '>
+                                    {/* <button className='px-2 py-2 mx-1 bg-[#e5c5ff]'><HiViewList size={20} /></button> */}
+                                    <button className={view === 'slider' ? 'px-2 py-2 mx-1 bg-[#87b7ff]' : 'px-2 pt-2 pb-1 mx-1 bg-[#0a9dff]'} onClick={handleToggle}>
+                                        <MdViewWeek size={20} />
+                                    </button>
+                                    <button className={view === 'slider' ? 'px-2 pt-2 pb-1 mx-1 bg-[#0a9dff]' : 'px-2 py-2 mx-1 bg-[#87b7ff]'} onClick={handleToggle}>
+                                        <HiViewList size={20} />
+                                    </button>
 
 
-                            {/* <button className='px-2 py-2 mx-1 bg-[#D09CFA]' onClick={handleToggle}><MdViewWeek size={20} /></button> */}
+                                    {/* <button className='px-2 py-2 mx-1 bg-[#D09CFA]' onClick={handleToggle}><MdViewWeek size={20} /></button> */}
+                                </div>
+                                <div className=' p-2 md:p-4 text-black border-[#87b7ff] border-t-2 sm:mr-8 rounded-l-md rounded-b-md'>
+                                    {view === 'slider' ? <>
+                                        <LanguagesSlider />
+                                    </> :
+                                        <>
+                                            <LanguageGrid />
+                                        </>}
+                                </div>
+                            </div>
+
                         </div>
-
-
                     </div>
-                    <div className=' p-4 text-black border-[#87b7ff] border-2 mr-8 rounded-l-md rounded-b-md'>
-                        {view === 'slider' ? <>
-                            <LanguagesSlider />
-                        </> :
-                            <>
-                                <LanguageGrid />
-                            </>}
-
-                    </div>
+                    {/* section */}
                 </div>
             </div>
         </div>
