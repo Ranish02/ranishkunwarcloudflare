@@ -8,8 +8,8 @@ const Board = () => {
                     <div className='flex justify-center items-center px-10' >
                         <div>
                             <div>
-                                Hi I am
-                                <div className='font-bold text-xl'>
+                                Hi, I am
+                                <div className='font-bold text-4xl'>
                                     Ranish Kunwar
                                 </div>
                             </div>
