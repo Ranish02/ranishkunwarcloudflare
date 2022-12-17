@@ -13,7 +13,7 @@ const Languages = () => {
     const [view, setview] = useState('slider');
     const handleToggle = () => {
         console.log(view);
-        if (view == 'slider') {
+        if (view === 'slider') {
             setview('list');
         }
         else {
@@ -48,10 +48,10 @@ const Languages = () => {
                     <div className='w-full flex justify-end mt-4 pr-8 mb-[-2px] '>
                         <div className='border-[#A0E4CB] border-2 pt-1'>
                             {/* <button className='px-2 py-2 mx-1 bg-[#e5c5ff]'><HiViewList size={20} /></button> */}
-                            <button className={view == 'slider' ? 'px-2 py-2 mx-1 bg-[#87b7ff]' : 'px-2 pt-2 pb-1 mx-1 bg-[#0a9dff]'} onClick={handleToggle}>
+                            <button className={view === 'slider' ? 'px-2 py-2 mx-1 bg-[#87b7ff]' : 'px-2 pt-2 pb-1 mx-1 bg-[#0a9dff]'} onClick={handleToggle}>
                                 <MdViewWeek size={20} />
                             </button>
-                            <button className={view == 'slider' ? 'px-2 pt-2 pb-1 mx-1 bg-[#0a9dff]' : 'px-2 py-2 mx-1 bg-[#87b7ff]'} onClick={handleToggle}>
+                            <button className={view === 'slider' ? 'px-2 pt-2 pb-1 mx-1 bg-[#0a9dff]' : 'px-2 py-2 mx-1 bg-[#87b7ff]'} onClick={handleToggle}>
                                 <HiViewList size={20} />
                             </button>
 
@@ -62,7 +62,7 @@ const Languages = () => {
 
                     </div>
                     <div className=' p-4 text-black border-[#87b7ff] border-2 mr-8 rounded-l-md rounded-b-md'>
-                        {view == 'slider' ? <>
+                        {view === 'slider' ? <>
                             <LanguagesSlider />
                         </> :
                             <>

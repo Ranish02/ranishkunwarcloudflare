@@ -12,10 +12,10 @@ const NavMobile = ({ setNavMobile }) => {
 
             </div>
             <ul className='flex flex-col items-center justify-center space-y-8 h-full text-white'>
-                <li className='text-lg'><a href='#'>Home</a></li>
-                <li className='text-lg'><a href='#'>Company</a></li>
-                <li className='text-lg'><a href='#'>Features</a></li>
-                <li className='btn'><a href='#'>Sign up</a></li>
+                <li className='text-lg'><a href='/home'>Home</a></li>
+                <li className='text-lg'><a href='/test'>Company</a></li>
+                <li className='text-lg'><a href='/features'>Features</a></li>
+                <li className='btn'><a href='/ok'>Sign up</a></li>
             </ul>
         </div>
     );

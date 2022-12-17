@@ -22,13 +22,11 @@ const Instagrampost = () => {
         }
     }
     useEffect(() => {
-        //console.log("Changed");
-        if (showlike) {
-            setTimeout(() => {
-                console.log("2 sec")
-                setShowlike(false)
-            }, 1600);
-        }
+
+        setTimeout(() => {
+            console.log("2 sec")
+            setShowlike(false)
+        }, 1600);
 
 
     }, [likective]);
