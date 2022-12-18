@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/ranishkunwar/static/css/main.9c1e1548.css",
+    "main.js": "/ranishkunwar/static/js/main.80a5cef0.js",
+    "static/media/img.png": "/ranishkunwar/static/media/img.040a34297072bf43d0be.png",
+    "index.html": "/ranishkunwar/index.html",
+    "main.9c1e1548.css.map": "/ranishkunwar/static/css/main.9c1e1548.css.map",
+    "main.80a5cef0.js.map": "/ranishkunwar/static/js/main.80a5cef0.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.9c1e1548.css",
+    "static/js/main.80a5cef0.js"
+  ]
+}
