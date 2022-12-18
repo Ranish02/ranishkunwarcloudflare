@@ -45,7 +45,7 @@ const Instagrampost = () => {
         // call axios methods
         //
         axios.get("https://api.countapi.xyz/hit/ranish/").then((res) =>
-            settotallikes(res.data.value)
+            console.log("")
         )
         console.log("sending Likes");
         console.log(likesent + 1);
