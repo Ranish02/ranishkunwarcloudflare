@@ -25,14 +25,14 @@ const Languages = () => {
             <div className='w-full h-screen  bg-[#1363DF] text-white pt-[50px] md:pl-4'>
                 <div className='w-screen h-screen text-white md:pt-[50px] px-4'>
                     <div className='grid grid-cols-1 md:grid-cols-2'>
-                        <div className='flex justify-center text-center px-10 items-center' >
+                        <div className='flex justify-center text-center items-center' >
                             <div>
-                                <div className='text-4xl md:text-7xl xl:text-8xl headings font-semibold p-4'>
+                                <div className='text-4xl md:text-6xl xl:text-8xl headings font-semibold pt-8'>
                                     LANGUAGES
                                 </div>
                                 <div className='p-4 text-sm md:text-base'>
-                                    Here are few languages I use.
-                                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ab id itaque ali
+                                    Also, here are few languages I use.
+                                    Lorem, ipsum dolor sit amet consectetur adipisicing eli
                                     <br />
                                 </div>
                             </div>

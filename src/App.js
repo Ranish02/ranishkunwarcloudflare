@@ -26,7 +26,10 @@ function App() {
               <Info />
               <Languages />
               <PotatoGram />
-              <Languages />
+              <div className="mt-0">
+                <Languages />
+              </div>
+
             </div>
 
           </>} />

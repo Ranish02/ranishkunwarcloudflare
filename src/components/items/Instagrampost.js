@@ -7,36 +7,93 @@ import { BsTag } from 'react-icons/bs';
 import { BsThreeDots } from 'react-icons/bs';
 import Imagesslider from '../Slider/Imagesslider';
 import '../../mycss/likeanimation.css'
+import axios from 'axios';
+import { useDoubleTap } from 'use-double-tap';
 
 const Instagrampost = () => {
-    const [likective, setLikeactive] = useState(false);
-    const [showlike, setShowlike] = useState(false);
+    const bind = useDoubleTap((event) => {
+        if (!showlikeanim) {
+            setshowlikeanim(true);
+        }
+        if (!isLiked) {
+            setisLiked(true);
+        }
+        if (isLiked) {
+            setLikeSent(likesent + 1);
+            settotallikes(totallikes + 1)
+            if (!counting) {
+                setcounting(true);
+                setTimeout(() => {
+                    setcounting(false);
+                    sendLikes();
+                    //setLikeSent(0);
+                }, 3000);
+            }
+        }
+
+        console.log('Double tapped');
+    });
+    useEffect(() => {
+        var likes;
+        axios.get("https://api.countapi.xyz/hit/ranish/").then((res) =>
+            settotallikes(res.data.value)
+        )
+    }, []);
+
+    const sendLikes = () => {
+
+        // call axios methods
+        //
+        axios.get("https://api.countapi.xyz/hit/ranish/").then((res) =>
+            settotallikes(res.data.value)
+        )
+        console.log("sending Likes");
+        console.log(likesent + 1);
+        setLikeSent(0);
+    }
+    const [likesent, setLikeSent] = useState(0);
+    const [counting, setcounting] = useState(false);
+    const [totallikes, settotallikes] = useState(15560);
+
+    //const [heartscount, setheartscount] = useState(0)
+    const [isLiked, setisLiked] = useState(false);
+    const [showlikeanim, setshowlikeanim] = useState(false);
     const handleLike = () => {
         //console.log("Clicked");
-        if (likective) {
-            setLikeactive(false);
+        if (!isLiked) {
+            setshowlikeanim(true);
+            setisLiked(true)
+            setLikeSent(likesent + 1);
+            sendLikes();
+            settotallikes(totallikes + 1);
         }
+
         else {
-            setShowlike(true);
-            setLikeactive(true);
+            setisLiked(false);
         }
     }
     useEffect(() => {
+        if (showlikeanim) {
+            setTimeout(() => {
+                //console.log("2 sec")
+                setshowlikeanim(false)
+            }, 1600);
+        }
 
-        setTimeout(() => {
-            console.log("2 sec")
-            setShowlike(false)
-        }, 1600);
 
 
-    }, [likective]);
+    }, [showlikeanim]);
+    // useEffect(() => {
+    //     console.log(likesent);
+
+    // }, [likesent]);
     return (
-        <div className='flex justify-center h-full mb-4 mt-2'>
-            <div className='w-[470px] border-x-[1px] border-y-[1px] border-[#9e9e9e]'>
+        <div className='flex justify-center  w-full'>
+            <div className='w-full max-w-[470px] h-full max-h-[680px]  border-x-[1px] border-y-[1px] border-[#9e9e9e] rounded-md '>
                 <div className='w-full flex justify-between px-4 my-auto pl-4 h-[47px]'>
                     <div className='flex my-auto'>
                         <BsPersonCircle size={30} />
-                        <div className='pl-2  my-auto'>
+                        <div className='ml-1 my-auto text-center'>
                             Shrinkhala_K20
                         </div>
                         <div className='pl-2 text-sm font-bold text-[#0084ff] my-auto'>
@@ -47,10 +104,10 @@ const Instagrampost = () => {
                         <BsThreeDots size={20} />
                     </div>
                 </div>
-                <div className='relative content'>
-                    {showlike ?
+                <div className='relative content w-full' {...bind}>
+                    {showlikeanim ?
                         (
-                            <div className={likective ? 'z-20 absolute w-[470px] h-[470px] heart-active heart scale-50' : 'z-20 absolute w-[470px] h-[470px] heart scale-50'}>
+                            <div className={isLiked ? 'z-20 absolute w-full h-full heart-active heart scale-50' : 'z-20 absolute w-[470px] h-[470px] heart scale-50'}>
                             </div>
                         )
                         :
@@ -63,13 +120,13 @@ const Instagrampost = () => {
 
                 <div className='w-full flex my-auto px-4 pt-4 justify-between'>
                     <div className='flex h-[50px]'>
-                        {likective ?
+                        {isLiked ?
                             (
                                 <>
-                                    {showlike ?
+                                    {showlikeanim ?
                                         (
                                             <div className=' w-[50px]' onClick={handleLike}>
-                                                <div className={likective ? 'heart-active h-full w-full heart' : 'heart h-full w-full scale-150'}></div>
+                                                <div className={isLiked ? 'heart-active h-full w-full heart' : 'heart h-full w-full scale-150'}></div>
                                             </div>
                                         ) :
                                         (
@@ -107,10 +164,10 @@ const Instagrampost = () => {
                         </div>
 
 
-                        {/* <div className={likective ? 'heart-active content' : 'content'} onClick={handleLike}>
-                            <span className={likective ? 'heart-active heart' : 'heart'}></span>
-                            <span className={likective ? 'heart-active text' : 'text'}>Like</span>
-                            <span className={likective ? 'heart-active numb' : 'numb'}></span>
+                        {/* <div className={isLiked ? 'heart-active content' : 'content'} onClick={handleLike}>
+                            <span className={isLiked ? 'heart-active heart' : 'heart'}></span>
+                            <span className={isLiked ? 'heart-active text' : 'text'}>Like</span>
+                            <span className={isLiked ? 'heart-active numb' : 'numb'}></span>
 
 
 
@@ -118,13 +175,20 @@ const Instagrampost = () => {
 
 
                     </div>
+                    {/* <div className='relative w-[40px]'>
+                        {likesent}
+                    </div> */}
                     <div>
                         <BsTag size={35} />
                     </div>
 
+
                 </div>
-                <div className='w-full flex my-auto pl-4 pt-2 font-bold text-sm'>
-                    10,528 <div className='ml-2'>
+                <div className='w-full flex my-auto pl-4 pt-2 font-bold text-sm '>
+                    <div>
+                        {totallikes}
+                    </div>
+                    <div className='ml-2'>
                         likes
                     </div>
                 </div>
@@ -136,7 +200,7 @@ const Instagrampost = () => {
                         Two Souls... <div className='font-thin pl-1'>more</div>
                     </div>
                 </div>
-                <div className='w-full text-xs font-thin flex my-auto pl-4  pt-2'>
+                <div className='w-full text-xs font-extralight flex my-auto pl-4  pt-2'>
                     MAY 5
                 </div>
 

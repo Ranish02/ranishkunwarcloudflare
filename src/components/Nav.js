@@ -10,7 +10,7 @@ const Nav = () => {
     return (
         <>
             <div className='flex glass h-[50px] rounded-b-lg mx-4
-        justify-between text-white text-center pl-10 pr-4 top-0 z-40 sticky'>
+        justify-between text-white text-center pl-10 pr-4 top-0 z-10 sticky'>
                 <div className='flex items-center justify-between md:justify-end font-bold text-2xl'>HOME</div>
                 {!navMobile ?
                     <div className="mY-AUTO flex md:hidden">
@@ -35,7 +35,7 @@ const Nav = () => {
 
             </div >
             <div
-                className={`${navMobile ? 'right-0' : '-right-full'} top-0 bottom-0 w-48 transition-all fixed h-screen z-50 `}>
+                className={`${navMobile ? 'right-0' : '-right-full'} top-0 bottom-0 w-48 transition-all fixed h-screen z-40 `}>
                 <NavMobile setNavMobile={setNavMobile} />
             </div>
         </>
